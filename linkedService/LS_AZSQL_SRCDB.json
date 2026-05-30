@@ -1,0 +1,17 @@
+{
+	"name": "LS_AZSQL_SRCDB",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "sql-srvr-vb-dev01.database.windows.net",
+			"database": "sql-db-vb-dev",
+			"encrypt": "mandatory",
+			"trustServerCertificate": true,
+			"authenticationType": "SQL",
+			"userName": "access-data-dev",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEZFNjA0MTI2LTE3OTQtNDVERi05MTY5LUFCQTQ5RjdGRjlBNF84OGRhZDAwZS1hMDk2LTQzN2YtOTFmOS1hNTAwMDBiODMwMzEiDQp9"
+		}
+	}
+}

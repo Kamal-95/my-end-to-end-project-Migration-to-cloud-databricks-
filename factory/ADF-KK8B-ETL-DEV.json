@@ -1,0 +1,15 @@
+{
+	"name": "ADF-KK8B-ETL-DEV",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Enabled",
+			"editable": true
+		}
+	},
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "12c111d1-f790-4853-86be-01dfa9cb3894",
+		"tenantId": "1fe2ea2b-4aea-411b-9966-e17599cfa231"
+	}
+}
