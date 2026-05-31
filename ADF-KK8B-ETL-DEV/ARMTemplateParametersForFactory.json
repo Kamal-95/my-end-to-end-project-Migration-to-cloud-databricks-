@@ -1,0 +1,90 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "ADF-KK8B-ETL-DEV"
+		},
+		"LS_AZSQL_CSV_EXCEL_password": {
+			"value": ""
+		},
+		"LS_AZSQL_DB_password": {
+			"value": ""
+		},
+		"LS_AZSQL_DB_CSV_password": {
+			"value": ""
+		},
+		"LS_AZSQL_SRCDB_password": {
+			"value": ""
+		},
+		"LS_RAW_ADLS_EXCEL_accountKey": {
+			"value": ""
+		},
+		"LS_SINK_ADLSsource_accountKey": {
+			"value": ""
+		},
+		"LS_SOURCE_ADLSRAW_accountKey": {
+			"value": ""
+		},
+		"LS_SQL_EXCEL_password": {
+			"value": ""
+		},
+		"LS_AZSQL_CSV_EXCEL_properties_typeProperties_server": {
+			"value": "sql-srvr-vb-dev01.database.windows.net"
+		},
+		"LS_AZSQL_CSV_EXCEL_properties_typeProperties_database": {
+			"value": "sql-db-vb-dev"
+		},
+		"LS_AZSQL_CSV_EXCEL_properties_typeProperties_userName": {
+			"value": "access-data-dev"
+		},
+		"LS_AZSQL_DB_properties_typeProperties_server": {
+			"value": "sql-srvr-vb-dev01.database.windows.net"
+		},
+		"LS_AZSQL_DB_properties_typeProperties_database": {
+			"value": "sql-db-vb-dev"
+		},
+		"LS_AZSQL_DB_properties_typeProperties_userName": {
+			"value": "access-data-dev"
+		},
+		"LS_AZSQL_DB_CSV_properties_typeProperties_server": {
+			"value": "sql-srvr-vb-dev01.database.windows.net"
+		},
+		"LS_AZSQL_DB_CSV_properties_typeProperties_database": {
+			"value": "sql-db-vb-dev"
+		},
+		"LS_AZSQL_DB_CSV_properties_typeProperties_userName": {
+			"value": "access-data-dev"
+		},
+		"LS_AZSQL_SRCDB_properties_typeProperties_server": {
+			"value": "sql-srvr-vb-dev01.database.windows.net"
+		},
+		"LS_AZSQL_SRCDB_properties_typeProperties_database": {
+			"value": "sql-db-vb-dev"
+		},
+		"LS_AZSQL_SRCDB_properties_typeProperties_userName": {
+			"value": "access-data-dev"
+		},
+		"LS_RAW_ADLS_EXCEL_properties_typeProperties_url": {
+			"value": "https://adlsdevvbraw.dfs.core.windows.net/"
+		},
+		"LS_SINK_ADLSsource_properties_typeProperties_url": {
+			"value": "https://adlsdevvbsrc001.dfs.core.windows.net/"
+		},
+		"LS_SOURCE_ADLSRAW_properties_typeProperties_url": {
+			"value": "https://adlsdevvbraw.dfs.core.windows.net/"
+		},
+		"LS_SQL_EXCEL_properties_typeProperties_server": {
+			"value": "sql-srvr-vb-dev01.database.windows.net"
+		},
+		"LS_SQL_EXCEL_properties_typeProperties_database": {
+			"value": "sql-db-vb-dev"
+		},
+		"LS_SQL_EXCEL_properties_typeProperties_userName": {
+			"value": "access-data-dev"
+		},
+		"Tr_sample_csv_properties_PL1_MASTER_parameters_Trigger": {
+			"value": "Tr_sample_csv"
+		}
+	}
+}
