@@ -11,7 +11,7 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"folderPath": {
-					"value": "@concat(\r\n    'csvcloud/',\r\n    formatDateTime(utcNow(),'yyyy'),\r\n    '/',\r\n    formatDateTime(utcNow(),'MM'),\r\n    '/',\r\n    formatDateTime(utcNow(),'dd')\r\n)",
+					"value": "@concat(\n    'csvcloud/',\n    formatDateTime(utcNow(),'yyyy'),\n    '/',\n    formatDateTime(utcNow(),'MM'),\n    '/',\n    formatDateTime(utcNow(),'dd')\n)",
 					"type": "Expression"
 				},
 				"fileSystem": "output"
