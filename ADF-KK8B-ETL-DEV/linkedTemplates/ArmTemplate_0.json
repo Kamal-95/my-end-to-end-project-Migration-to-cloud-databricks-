@@ -391,7 +391,7 @@
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobFSLocation",
-						"fileName": "olist_orderpayments_dataset.csv",
+						"fileName": "olist_order_payments_dataset.csv",
 						"folderPath": "csv",
 						"fileSystem": "input"
 					},
