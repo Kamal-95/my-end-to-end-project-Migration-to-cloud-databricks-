@@ -1,0 +1,16 @@
+{
+	"name": "LS_EXCEL_SOURCE_ADLSRAW",
+	"properties": {
+		"parameters": {
+			"storage_account_loc": {
+				"type": "string",
+				"defaultValue": "https://adlsdevvbraw.dfs.core.windows.net"
+			}
+		},
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "@{linkedService().storage_account_loc}"
+		}
+	}
+}
