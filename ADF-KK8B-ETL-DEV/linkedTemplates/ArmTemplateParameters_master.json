@@ -8,6 +8,9 @@
 		"DS_JSON_SINK_PARQUET_accountKey": {
 			"value": ""
 		},
+		"LS_API_SINK_ADLSsrc_accountKey": {
+			"value": ""
+		},
 		"LS_AZSQL_CSV_EXCEL_password": {
 			"value": ""
 		},
@@ -43,6 +46,12 @@
 		},
 		"DS_JSON_SINK_PARQUET_properties_typeProperties_url": {
 			"value": "https://adlsdevvbsrc001.dfs.core.windows.net/"
+		},
+		"LS_API_SINK_ADLSsrc_properties_typeProperties_url": {
+			"value": "https://adlsdevvbsrc001.dfs.core.windows.net/"
+		},
+		"LS_API_SOURCE_ADLS_properties_typeProperties_url": {
+			"value": "https://retoolapi.dev/WNDyhS/data"
 		},
 		"LS_AZSQL_CSV_EXCEL_properties_typeProperties_server": {
 			"value": "sql-srvr-vb-dev01.database.windows.net"

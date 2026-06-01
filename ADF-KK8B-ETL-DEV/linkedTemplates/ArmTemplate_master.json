@@ -11,6 +11,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'DS_JSON_SINK_PARQUET'"
 		},
+		"LS_API_SINK_ADLSsrc_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_API_SINK_ADLSsrc'"
+		},
 		"LS_AZSQL_CSV_EXCEL_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'LS_AZSQL_CSV_EXCEL'"
@@ -58,6 +62,14 @@
 		"DS_JSON_SINK_PARQUET_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://adlsdevvbsrc001.dfs.core.windows.net/"
+		},
+		"LS_API_SINK_ADLSsrc_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevvbsrc001.dfs.core.windows.net/"
+		},
+		"LS_API_SOURCE_ADLS_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://retoolapi.dev/WNDyhS/data"
 		},
 		"LS_AZSQL_CSV_EXCEL_properties_typeProperties_server": {
 			"type": "string",
@@ -181,6 +193,9 @@
 					"DS_JSON_SINK_PARQUET_accountKey": {
 						"value": "[parameters('DS_JSON_SINK_PARQUET_accountKey')]"
 					},
+					"LS_API_SINK_ADLSsrc_accountKey": {
+						"value": "[parameters('LS_API_SINK_ADLSsrc_accountKey')]"
+					},
 					"LS_AZSQL_CSV_EXCEL_password": {
 						"value": "[parameters('LS_AZSQL_CSV_EXCEL_password')]"
 					},
@@ -216,6 +231,12 @@
 					},
 					"DS_JSON_SINK_PARQUET_properties_typeProperties_url": {
 						"value": "[parameters('DS_JSON_SINK_PARQUET_properties_typeProperties_url')]"
+					},
+					"LS_API_SINK_ADLSsrc_properties_typeProperties_url": {
+						"value": "[parameters('LS_API_SINK_ADLSsrc_properties_typeProperties_url')]"
+					},
+					"LS_API_SOURCE_ADLS_properties_typeProperties_url": {
+						"value": "[parameters('LS_API_SOURCE_ADLS_properties_typeProperties_url')]"
 					},
 					"LS_AZSQL_CSV_EXCEL_properties_typeProperties_server": {
 						"value": "[parameters('LS_AZSQL_CSV_EXCEL_properties_typeProperties_server')]"
