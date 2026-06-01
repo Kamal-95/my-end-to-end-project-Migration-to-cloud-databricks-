@@ -23,6 +23,10 @@
 						},
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
+					},
+					"dataset": {
+						"referenceName": "AZSQL_DB_CSV",
+						"type": "DatasetReference"
 					}
 				}
 			},
