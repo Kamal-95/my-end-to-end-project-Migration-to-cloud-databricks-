@@ -104,15 +104,28 @@
 							]
 						},
 						{
-							"value": "sql",
+							"value": "API",
 							"activities": [
 								{
-									"name": "Wait2",
-									"type": "Wait",
+									"name": "Execute Pipeline3",
+									"type": "ExecutePipeline",
 									"dependsOn": [],
+									"policy": {
+										"secureInput": false
+									},
 									"userProperties": [],
 									"typeProperties": {
-										"waitTimeInSeconds": 1
+										"pipeline": {
+											"referenceName": "PL_API_PARQUET",
+											"type": "PipelineReference"
+										},
+										"waitOnCompletion": true,
+										"parameters": {
+											"Trigger": {
+												"value": "@pipeline().parameters.Trigger",
+												"type": "Expression"
+											}
+										}
 									}
 								}
 							]

@@ -1,0 +1,12 @@
+{
+	"name": "DS_API_SOURCE_ADLS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_API_SOURCE_ADLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"schema": []
+	}
+}
