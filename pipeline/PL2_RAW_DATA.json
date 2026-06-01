@@ -77,15 +77,28 @@
 							]
 						},
 						{
-							"value": "API",
+							"value": "json",
 							"activities": [
 								{
-									"name": "Wait1",
-									"type": "Wait",
+									"name": "Execute Pipeline2",
+									"type": "ExecutePipeline",
 									"dependsOn": [],
+									"policy": {
+										"secureInput": false
+									},
 									"userProperties": [],
 									"typeProperties": {
-										"waitTimeInSeconds": 1
+										"pipeline": {
+											"referenceName": "PL_JSON_PARQUET",
+											"type": "PipelineReference"
+										},
+										"waitOnCompletion": true,
+										"parameters": {
+											"Trigger": {
+												"value": "@pipeline().parameters.Trigger",
+												"type": "Expression"
+											}
+										}
 									}
 								}
 							]
