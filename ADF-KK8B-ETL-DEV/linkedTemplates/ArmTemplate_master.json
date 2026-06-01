@@ -7,6 +7,10 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "ADF-KK8B-ETL-DEV"
 		},
+		"DS_JSON_SINK_PARQUET_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'DS_JSON_SINK_PARQUET'"
+		},
 		"LS_AZSQL_CSV_EXCEL_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'LS_AZSQL_CSV_EXCEL'"
@@ -27,6 +31,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'LS_EXCEL_RAWADLS_SINK'"
 		},
+		"LS_JSON_RAW_ADLS_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_JSON_RAW_ADLS'"
+		},
 		"LS_RAW_ADLS_EXCEL_accountKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'LS_RAW_ADLS_EXCEL'"
@@ -46,6 +54,10 @@
 		"LS_SQL_EXCEL_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'LS_SQL_EXCEL'"
+		},
+		"DS_JSON_SINK_PARQUET_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevvbsrc001.dfs.core.windows.net/"
 		},
 		"LS_AZSQL_CSV_EXCEL_properties_typeProperties_server": {
 			"type": "string",
@@ -102,6 +114,10 @@
 		"LS_EXCEL_SOURCE_ADLSRAW_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "@{linkedService().storage_account_loc}"
+		},
+		"LS_JSON_RAW_ADLS_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevvbraw.dfs.core.windows.net"
 		},
 		"LS_RAW_ADLS_EXCEL_properties_typeProperties_url": {
 			"type": "string",
@@ -162,6 +178,9 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"DS_JSON_SINK_PARQUET_accountKey": {
+						"value": "[parameters('DS_JSON_SINK_PARQUET_accountKey')]"
+					},
 					"LS_AZSQL_CSV_EXCEL_password": {
 						"value": "[parameters('LS_AZSQL_CSV_EXCEL_password')]"
 					},
@@ -177,6 +196,9 @@
 					"LS_EXCEL_RAWADLS_SINK_accountKey": {
 						"value": "[parameters('LS_EXCEL_RAWADLS_SINK_accountKey')]"
 					},
+					"LS_JSON_RAW_ADLS_accountKey": {
+						"value": "[parameters('LS_JSON_RAW_ADLS_accountKey')]"
+					},
 					"LS_RAW_ADLS_EXCEL_accountKey": {
 						"value": "[parameters('LS_RAW_ADLS_EXCEL_accountKey')]"
 					},
@@ -191,6 +213,9 @@
 					},
 					"LS_SQL_EXCEL_password": {
 						"value": "[parameters('LS_SQL_EXCEL_password')]"
+					},
+					"DS_JSON_SINK_PARQUET_properties_typeProperties_url": {
+						"value": "[parameters('DS_JSON_SINK_PARQUET_properties_typeProperties_url')]"
 					},
 					"LS_AZSQL_CSV_EXCEL_properties_typeProperties_server": {
 						"value": "[parameters('LS_AZSQL_CSV_EXCEL_properties_typeProperties_server')]"
@@ -233,6 +258,9 @@
 					},
 					"LS_EXCEL_SOURCE_ADLSRAW_properties_typeProperties_url": {
 						"value": "[parameters('LS_EXCEL_SOURCE_ADLSRAW_properties_typeProperties_url')]"
+					},
+					"LS_JSON_RAW_ADLS_properties_typeProperties_url": {
+						"value": "[parameters('LS_JSON_RAW_ADLS_properties_typeProperties_url')]"
 					},
 					"LS_RAW_ADLS_EXCEL_properties_typeProperties_url": {
 						"value": "[parameters('LS_RAW_ADLS_EXCEL_properties_typeProperties_url')]"

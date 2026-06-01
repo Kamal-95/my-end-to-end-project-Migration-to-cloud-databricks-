@@ -5,6 +5,9 @@
 		"factoryName": {
 			"value": "ADF-KK8B-ETL-DEV"
 		},
+		"DS_JSON_SINK_PARQUET_accountKey": {
+			"value": ""
+		},
 		"LS_AZSQL_CSV_EXCEL_password": {
 			"value": ""
 		},
@@ -18,6 +21,9 @@
 			"value": ""
 		},
 		"LS_EXCEL_RAWADLS_SINK_accountKey": {
+			"value": ""
+		},
+		"LS_JSON_RAW_ADLS_accountKey": {
 			"value": ""
 		},
 		"LS_RAW_ADLS_EXCEL_accountKey": {
@@ -34,6 +40,9 @@
 		},
 		"LS_SQL_EXCEL_password": {
 			"value": ""
+		},
+		"DS_JSON_SINK_PARQUET_properties_typeProperties_url": {
+			"value": "https://adlsdevvbsrc001.dfs.core.windows.net/"
 		},
 		"LS_AZSQL_CSV_EXCEL_properties_typeProperties_server": {
 			"value": "sql-srvr-vb-dev01.database.windows.net"
@@ -76,6 +85,9 @@
 		},
 		"LS_EXCEL_SOURCE_ADLSRAW_properties_typeProperties_url": {
 			"value": "@{linkedService().storage_account_loc}"
+		},
+		"LS_JSON_RAW_ADLS_properties_typeProperties_url": {
+			"value": "https://adlsdevvbraw.dfs.core.windows.net"
 		},
 		"LS_RAW_ADLS_EXCEL_properties_typeProperties_url": {
 			"value": "https://adlsdevvbraw.dfs.core.windows.net/"
