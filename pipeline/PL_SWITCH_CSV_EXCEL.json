@@ -23,10 +23,6 @@
 						},
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
-					},
-					"dataset": {
-						"referenceName": "DS_AZSQL_CSV_EXCEL",
-						"type": "DatasetReference"
 					}
 				}
 			},
@@ -79,12 +75,19 @@
 							"value": "excel",
 							"activities": [
 								{
-									"name": "Wait1",
-									"type": "Wait",
+									"name": "Execute Pipeline2",
+									"type": "ExecutePipeline",
 									"dependsOn": [],
+									"policy": {
+										"secureInput": false
+									},
 									"userProperties": [],
 									"typeProperties": {
-										"waitTimeInSeconds": 1
+										"pipeline": {
+											"referenceName": "PL_EXCEL_PARQUET",
+											"type": "PipelineReference"
+										},
+										"waitOnCompletion": true
 									}
 								}
 							]
