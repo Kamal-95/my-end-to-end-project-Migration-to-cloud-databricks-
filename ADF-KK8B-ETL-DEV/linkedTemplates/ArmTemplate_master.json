@@ -23,6 +23,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'LS_AZSQL_SRCDB'"
 		},
+		"LS_EXCEL_RAWADLS_SINK_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_EXCEL_RAWADLS_SINK'"
+		},
 		"LS_RAW_ADLS_EXCEL_accountKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'LS_RAW_ADLS_EXCEL'"
@@ -34,6 +38,10 @@
 		"LS_SOURCE_ADLSRAW_accountKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'LS_SOURCE_ADLSRAW'"
+		},
+		"LS_SOURCE_ADLS_RAW_EXCEL_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_SOURCE_ADLS_RAW_EXCEL'"
 		},
 		"LS_SQL_EXCEL_password": {
 			"type": "secureString",
@@ -87,6 +95,14 @@
 			"type": "string",
 			"defaultValue": "access-data-dev"
 		},
+		"LS_EXCEL_RAWADLS_SINK_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevvbsrc001.dfs.core.windows.net/"
+		},
+		"LS_EXCEL_SOURCE_ADLSRAW_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "@{linkedService().storage_account_loc}"
+		},
 		"LS_RAW_ADLS_EXCEL_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://adlsdevvbraw.dfs.core.windows.net/"
@@ -96,6 +112,10 @@
 			"defaultValue": "https://adlsdevvbsrc001.dfs.core.windows.net/"
 		},
 		"LS_SOURCE_ADLSRAW_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevvbraw.dfs.core.windows.net/"
+		},
+		"LS_SOURCE_ADLS_RAW_EXCEL_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://adlsdevvbraw.dfs.core.windows.net/"
 		},
@@ -154,6 +174,9 @@
 					"LS_AZSQL_SRCDB_password": {
 						"value": "[parameters('LS_AZSQL_SRCDB_password')]"
 					},
+					"LS_EXCEL_RAWADLS_SINK_accountKey": {
+						"value": "[parameters('LS_EXCEL_RAWADLS_SINK_accountKey')]"
+					},
 					"LS_RAW_ADLS_EXCEL_accountKey": {
 						"value": "[parameters('LS_RAW_ADLS_EXCEL_accountKey')]"
 					},
@@ -162,6 +185,9 @@
 					},
 					"LS_SOURCE_ADLSRAW_accountKey": {
 						"value": "[parameters('LS_SOURCE_ADLSRAW_accountKey')]"
+					},
+					"LS_SOURCE_ADLS_RAW_EXCEL_accountKey": {
+						"value": "[parameters('LS_SOURCE_ADLS_RAW_EXCEL_accountKey')]"
 					},
 					"LS_SQL_EXCEL_password": {
 						"value": "[parameters('LS_SQL_EXCEL_password')]"
@@ -202,6 +228,12 @@
 					"LS_AZSQL_SRCDB_properties_typeProperties_userName": {
 						"value": "[parameters('LS_AZSQL_SRCDB_properties_typeProperties_userName')]"
 					},
+					"LS_EXCEL_RAWADLS_SINK_properties_typeProperties_url": {
+						"value": "[parameters('LS_EXCEL_RAWADLS_SINK_properties_typeProperties_url')]"
+					},
+					"LS_EXCEL_SOURCE_ADLSRAW_properties_typeProperties_url": {
+						"value": "[parameters('LS_EXCEL_SOURCE_ADLSRAW_properties_typeProperties_url')]"
+					},
 					"LS_RAW_ADLS_EXCEL_properties_typeProperties_url": {
 						"value": "[parameters('LS_RAW_ADLS_EXCEL_properties_typeProperties_url')]"
 					},
@@ -210,6 +242,9 @@
 					},
 					"LS_SOURCE_ADLSRAW_properties_typeProperties_url": {
 						"value": "[parameters('LS_SOURCE_ADLSRAW_properties_typeProperties_url')]"
+					},
+					"LS_SOURCE_ADLS_RAW_EXCEL_properties_typeProperties_url": {
+						"value": "[parameters('LS_SOURCE_ADLS_RAW_EXCEL_properties_typeProperties_url')]"
 					},
 					"LS_SQL_EXCEL_properties_typeProperties_server": {
 						"value": "[parameters('LS_SQL_EXCEL_properties_typeProperties_server')]"

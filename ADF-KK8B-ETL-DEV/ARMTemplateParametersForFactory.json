@@ -17,6 +17,9 @@
 		"LS_AZSQL_SRCDB_password": {
 			"value": ""
 		},
+		"LS_EXCEL_RAWADLS_SINK_accountKey": {
+			"value": ""
+		},
 		"LS_RAW_ADLS_EXCEL_accountKey": {
 			"value": ""
 		},
@@ -24,6 +27,9 @@
 			"value": ""
 		},
 		"LS_SOURCE_ADLSRAW_accountKey": {
+			"value": ""
+		},
+		"LS_SOURCE_ADLS_RAW_EXCEL_accountKey": {
 			"value": ""
 		},
 		"LS_SQL_EXCEL_password": {
@@ -65,6 +71,12 @@
 		"LS_AZSQL_SRCDB_properties_typeProperties_userName": {
 			"value": "access-data-dev"
 		},
+		"LS_EXCEL_RAWADLS_SINK_properties_typeProperties_url": {
+			"value": "https://adlsdevvbsrc001.dfs.core.windows.net/"
+		},
+		"LS_EXCEL_SOURCE_ADLSRAW_properties_typeProperties_url": {
+			"value": "@{linkedService().storage_account_loc}"
+		},
 		"LS_RAW_ADLS_EXCEL_properties_typeProperties_url": {
 			"value": "https://adlsdevvbraw.dfs.core.windows.net/"
 		},
@@ -72,6 +84,9 @@
 			"value": "https://adlsdevvbsrc001.dfs.core.windows.net/"
 		},
 		"LS_SOURCE_ADLSRAW_properties_typeProperties_url": {
+			"value": "https://adlsdevvbraw.dfs.core.windows.net/"
+		},
+		"LS_SOURCE_ADLS_RAW_EXCEL_properties_typeProperties_url": {
 			"value": "https://adlsdevvbraw.dfs.core.windows.net/"
 		},
 		"LS_SQL_EXCEL_properties_typeProperties_server": {
