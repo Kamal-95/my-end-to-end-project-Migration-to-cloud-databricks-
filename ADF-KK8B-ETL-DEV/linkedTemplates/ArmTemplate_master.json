@@ -43,6 +43,14 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'LS_RAW_ADLS_EXCEL'"
 		},
+		"LS_SFTP_SINK_PARQUET_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_SFTP_SINK_PARQUET'"
+		},
+		"LS_SFTP_SOURCE_PARQUET_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_SFTP_SOURCE_PARQUET'"
+		},
 		"LS_SINK_ADLSsource_accountKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'LS_SINK_ADLSsource'"
@@ -58,6 +66,14 @@
 		"LS_SQL_EXCEL_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'LS_SQL_EXCEL'"
+		},
+		"LS_SQL_SINK_PARQUET_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_SQL_SINK_PARQUET'"
+		},
+		"SqlServer1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'SqlServer1'"
 		},
 		"DS_JSON_SINK_PARQUET_properties_typeProperties_url": {
 			"type": "string",
@@ -135,6 +151,14 @@
 			"type": "string",
 			"defaultValue": "https://adlsdevvbraw.dfs.core.windows.net/"
 		},
+		"LS_SFTP_SINK_PARQUET_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevvbsrc001.dfs.core.windows.net/"
+		},
+		"LS_SFTP_SOURCE_PARQUET_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevvbraw.dfs.core.windows.net/"
+		},
 		"LS_SINK_ADLSsource_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://adlsdevvbsrc001.dfs.core.windows.net/"
@@ -158,6 +182,22 @@
 		"LS_SQL_EXCEL_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "access-data-dev"
+		},
+		"LS_SQL_SINK_PARQUET_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevvbsrc001.dfs.core.windows.net/"
+		},
+		"SqlServer1_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "VAIBHAV\\SQLEXPRESS"
+		},
+		"SqlServer1_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "vbadeproject"
+		},
+		"SqlServer1_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "sa"
 		},
 		"Tr_sample_csv_properties_PL1_MASTER_parameters_Trigger": {
 			"type": "string",
@@ -217,6 +257,12 @@
 					"LS_RAW_ADLS_EXCEL_accountKey": {
 						"value": "[parameters('LS_RAW_ADLS_EXCEL_accountKey')]"
 					},
+					"LS_SFTP_SINK_PARQUET_accountKey": {
+						"value": "[parameters('LS_SFTP_SINK_PARQUET_accountKey')]"
+					},
+					"LS_SFTP_SOURCE_PARQUET_accountKey": {
+						"value": "[parameters('LS_SFTP_SOURCE_PARQUET_accountKey')]"
+					},
 					"LS_SINK_ADLSsource_accountKey": {
 						"value": "[parameters('LS_SINK_ADLSsource_accountKey')]"
 					},
@@ -228,6 +274,9 @@
 					},
 					"LS_SQL_EXCEL_password": {
 						"value": "[parameters('LS_SQL_EXCEL_password')]"
+					},
+					"LS_SQL_SINK_PARQUET_accountKey": {
+						"value": "[parameters('LS_SQL_SINK_PARQUET_accountKey')]"
 					},
 					"DS_JSON_SINK_PARQUET_properties_typeProperties_url": {
 						"value": "[parameters('DS_JSON_SINK_PARQUET_properties_typeProperties_url')]"
@@ -286,6 +335,12 @@
 					"LS_RAW_ADLS_EXCEL_properties_typeProperties_url": {
 						"value": "[parameters('LS_RAW_ADLS_EXCEL_properties_typeProperties_url')]"
 					},
+					"LS_SFTP_SINK_PARQUET_properties_typeProperties_url": {
+						"value": "[parameters('LS_SFTP_SINK_PARQUET_properties_typeProperties_url')]"
+					},
+					"LS_SFTP_SOURCE_PARQUET_properties_typeProperties_url": {
+						"value": "[parameters('LS_SFTP_SOURCE_PARQUET_properties_typeProperties_url')]"
+					},
 					"LS_SINK_ADLSsource_properties_typeProperties_url": {
 						"value": "[parameters('LS_SINK_ADLSsource_properties_typeProperties_url')]"
 					},
@@ -303,6 +358,9 @@
 					},
 					"LS_SQL_EXCEL_properties_typeProperties_userName": {
 						"value": "[parameters('LS_SQL_EXCEL_properties_typeProperties_userName')]"
+					},
+					"LS_SQL_SINK_PARQUET_properties_typeProperties_url": {
+						"value": "[parameters('LS_SQL_SINK_PARQUET_properties_typeProperties_url')]"
 					}
 				}
 			},
@@ -322,13 +380,45 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"SqlServer1_password": {
+						"value": "[parameters('SqlServer1_password')]"
+					},
+					"SqlServer1_properties_typeProperties_server": {
+						"value": "[parameters('SqlServer1_properties_typeProperties_server')]"
+					},
+					"SqlServer1_properties_typeProperties_database": {
+						"value": "[parameters('SqlServer1_properties_typeProperties_database')]"
+					},
+					"SqlServer1_properties_typeProperties_userName": {
+						"value": "[parameters('SqlServer1_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'ADF-KK8B-ETL-DEV_ArmTemplate_0')]"
+			]
+		},
+		{
+			"name": "ADF-KK8B-ETL-DEV_ArmTemplate_2",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_2.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
 					"Tr_sample_csv_properties_PL1_MASTER_parameters_Trigger": {
 						"value": "[parameters('Tr_sample_csv_properties_PL1_MASTER_parameters_Trigger')]"
 					}
 				}
 			},
 			"dependsOn": [
-				"[resourceId('Microsoft.Resources/deployments', 'ADF-KK8B-ETL-DEV_ArmTemplate_0')]"
+				"[resourceId('Microsoft.Resources/deployments', 'ADF-KK8B-ETL-DEV_ArmTemplate_1')]"
 			]
 		}
 	]
